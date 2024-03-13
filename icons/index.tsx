@@ -104,3 +104,5 @@ export const QuestionMarkIcon = React.forwardRef<SVGSVGElement, IconProps>(
 )
 
 QuestionMarkIcon.displayName = 'QuestionMarkIcon'
+
+// document.documentElement.classList.add('dark')

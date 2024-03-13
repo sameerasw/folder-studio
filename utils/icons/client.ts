@@ -43,12 +43,14 @@ export async function generatePreview(canvas: Canvas, ctx: Context, config: Conf
    const { width, height } = getIconDimensions(iconImg.width, iconImg.height, resolution)
    const { x, y } = getIconPosition(width, height, resolution)
    const icon = await createIcon(iconImg, width, height, config)
-   const folder = await loadImage(getFolderPath(resolution, config.theme))
+   const folder = await createIcon(await loadImage(getFolderPath(resolution, config.theme)), width, height, config)
+   const overlay = await loadImage(getFolderPath(resolution, 'light'))
+   // const folder = await loadImage(getFolderPath(resolution, config.theme))
 
    // add color to the folder before drawing the icon
 
    const size = Size[resolution]
    canvas.width = size
    canvas.height = size
-   drawFolderArt(ctx, folder, icon, x, y, width, height, resolution)
+   drawFolderArt(ctx, folder, icon, overlay, x, y, width, height, resolution)
 }

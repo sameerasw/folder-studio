@@ -62,6 +62,7 @@ export function drawFolderArt<Image extends HTMLImageElement>(
    ctx: Context,
    folder: Image,
    icon: Image,
+   overlay: Image,
    x: number,
    y: number,
    width: number,
@@ -70,6 +71,7 @@ export function drawFolderArt<Image extends HTMLImageElement>(
 ) {
    const size = Size[resolution]
    ctx.drawImage(folder, 0, 0, size, size)
+   ctx.drawImage(overlay, 0, 0, size, size)
 
    ctx.shadowColor = ICON_SHADOW_COLOR
    ctx.shadowOffsetY = ICON_SHADOW_SIZE
