@@ -45,6 +45,8 @@ export async function generatePreview(canvas: Canvas, ctx: Context, config: Conf
    const icon = await createIcon(iconImg, width, height, config)
    const folder = await loadImage(getFolderPath(resolution, config.theme))
 
+   // add color to the folder before drawing the icon
+
    const size = Size[resolution]
    canvas.width = size
    canvas.height = size

@@ -24,12 +24,12 @@ export function Configuration({
    }
 
    function changePageTheme() {
-      if (configuration.theme === 'dark') {
+      if (configuration.theme !== 'dark') {
          document.documentElement.classList.add('dark')
-         configuration.theme = 'light'
+         configuration.theme = 'dark'
       } else {
          document.documentElement.classList.remove('dark')
-         configuration.theme = 'dark'
+         configuration.theme = 'light'
       }
    }
 
@@ -128,6 +128,7 @@ export function Configuration({
          </Button>
 
          <Button variant='outlined' className='w-full' onClick={() => changePageTheme()}>
+
             <span>Change Theme</span>
 
          </Button>

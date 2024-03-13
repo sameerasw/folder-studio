@@ -23,13 +23,24 @@ html{
 .dark{
    background-color: #363636;
    color: #fff;
-   .editor{
-      background-color: #fff;
-      color: #000;
-      box-shadow: 0 0 20px 0 #00000066;
-      select{
-         background-color: #fff;
-         color: #000;
-      }
-   }
+}
+
+.editor{
+   background-color: #fff;
+   color: #000;
+}
+
+select{
+   background-color: #fff;
+   color: #000;
+}
+
+.editor{
+   box-shadow: 0 0 20px 0 #00000066;
+}
+
+.icon-preview{
+   /* shadow of the png */
+   filter: drop-shadow(0 0 20px #00000033);
+   
 }

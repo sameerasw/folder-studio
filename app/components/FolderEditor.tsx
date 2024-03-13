@@ -45,8 +45,10 @@ export function FolderEditor() {
             <p className='text-sm'>
                <span className='text-zinc-500'> FolderArt / </span> {filename}.png
             </p>
-
+            
+            <div className='icon-preview'>
             <Folder loading={loading} canvasRef={canvasRef} />
+            </div>
 
             <HowToUse />
          </div>
