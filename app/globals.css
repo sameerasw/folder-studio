@@ -16,7 +16,11 @@
    }
 }
 
-body{
+html{
+   transition: background-color 0.5s, color 0.5s;
+}
+
+.dark{
    background-color: #363636;
    color: #fff;
    .editor{

@@ -23,6 +23,16 @@ export function Configuration({
       }
    }
 
+   function changePageTheme() {
+      if (configuration.theme === 'dark') {
+         document.documentElement.classList.add('dark')
+         configuration.theme = 'light'
+      } else {
+         document.documentElement.classList.remove('dark')
+         configuration.theme = 'dark'
+      }
+   }
+
    return (
       <aside
          className='relative h-full md:w-80 lg:w-96 rounded-xl border border-zinc-200 p-5 flex flex-col gap-5 shadow-sm editor'
@@ -115,6 +125,11 @@ export function Configuration({
             <DownloadIcon className='h-5 w-5 stroke-2' />
 
             <span>Download</span>
+         </Button>
+
+         <Button variant='outlined' className='w-full' onClick={() => changePageTheme()}>
+            <span>Change Theme</span>
+
          </Button>
       </aside>
    )
