@@ -25,7 +25,7 @@ export function Configuration({
 
    return (
       <aside
-         className='relative h-full md:w-80 lg:w-96 rounded-xl border border-zinc-200 p-5 flex flex-col gap-5 shadow-sm'
+         className='relative h-full md:w-80 lg:w-96 rounded-xl border border-zinc-200 p-5 flex flex-col gap-5 shadow-sm editor'
          style={{
             height: 'calc(100vh - 40px)',
          }}
@@ -56,9 +56,20 @@ export function Configuration({
                onChangeConfig('theme', e.target.value as Config['theme'])
             }}
          >
-            <option value='dark'>Dark Mode</option>
-            <option value='light'>Light Mode</option>
+            <option value='dark' style={{color:'#bbbb00'}} >Yellow</option>
+            <option value='light' style={{color:'#3388ff'}} >Blue</option>
          </select>
+
+         {/* add a color picker with a color wheel*/}
+         {/* <input
+            type='color'
+            className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
+            value={configuration.color}
+            onChange={(e) => {
+               onChangeConfig('color', e.target.value)
+            }}
+         /> */}
+         
 
          <select
             className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'

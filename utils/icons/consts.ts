@@ -65,16 +65,16 @@ export const IconColor: Record<
    { red: number; green: number; blue: number }
 > = {
    dark: {
-      red: 51,
-      green: 157,
-      blue: 224,
+      red: 240,
+      green: 175,
+      blue: 25,
    },
    light: {
-      red: 63,
-      green: 170,
-      blue: 230,
+      red: 55,
+      green: 145,
+      blue: 220,
    },
 }
 
-export const ICON_SHADOW_SIZE = 3
-export const ICON_SHADOW_COLOR = '#97D8FC'
+export const ICON_SHADOW_SIZE = 6
+export const ICON_SHADOW_COLOR = '#44444444'

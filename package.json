@@ -3,9 +3,9 @@
    "version": "0.1.0",
    "private": true,
    "scripts": {
-      "dev": "next dev",
+      "dev": "next dev -H 192.168.8.151",
       "build": "next build",
-      "start": "next start",
+      "start": "next start -H 192.168.8.151",
       "lint": "next lint && tsc",
       "test": "node --test --watch",
       "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\""
