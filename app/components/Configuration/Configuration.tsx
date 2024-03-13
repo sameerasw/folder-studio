@@ -5,6 +5,7 @@ import { DownloadIcon, FolderIcon } from '@/icons'
 import { Config } from '@/utils/icons'
 import { useRef } from 'react'
 import { devIcons } from './defaultIcons'
+import { updateIconColor } from '@/utils/icons/consts'
 
 let pageTheme = 'dark'
 
@@ -36,6 +37,28 @@ export function Configuration({
       }
    }
 
+   function colorChange(e: React.ChangeEvent<HTMLInputElement>) {
+      // separate the color into rgb
+      const color = e.target.value
+      const red = parseInt(color.slice(1, 3), 16)
+      const green = parseInt(color.slice(3, 5), 16)
+      const blue = parseInt(color.slice(5, 7), 16)
+
+      // console.log(red, green, blue)
+
+      // update the IconColor
+      updateIconColor(red, green, blue)
+      refresh()
+
+      // update the configuration color
+      onChangeConfig('color', color)
+      }
+
+   function refresh () {
+      // update the icon by re-generating the preview
+      onChangeConfig('icon', configuration.icon)
+   }
+
    return (
       <aside
          className='relative h-full md:w-80 lg:w-96 rounded-xl border border-zinc-200 p-5 flex flex-col gap-5 shadow-sm editor'
@@ -62,25 +85,12 @@ export function Configuration({
             }}
          />
 
-         {/* <select
-            className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
-            value={configuration.theme}
-            onChange={(e) => {
-               onChangeConfig('theme', e.target.value as Config['theme'])
-            }}
-         >
-            <option value='dark' style={{color:'#bbbb00'}} >Yellow</option>
-            <option value='light' style={{color:'#3388ff'}} >Blue</option>
-         </select> */}
-
-         {/* add a color picker with a color wheel*/}
          <input
             type='color'
             className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
             value={configuration.color}
             onChange={(e) => {
-               // modify the color picker to a color to a number
-               onChangeConfig('color', parseInt(e.target.value.slice(1), 16))
+               colorChange(e)
             }}
          />
          

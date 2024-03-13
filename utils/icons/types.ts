@@ -9,11 +9,12 @@ export type IconConstraints = {
 }
 
 export type Config = {
-   color: number
+   color: string
    theme: Theme
    adjustColor: number
    icon?: File | string
 }
+
 
 export type Canvas = {
    width: number
