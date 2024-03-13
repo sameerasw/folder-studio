@@ -1,13 +1,11 @@
-<h1 align="center">FolderArt</h1>
-
-![FolderArt cover](public/cover.png) <br />
+<h1 align="center">Folder Studio</h1>
 
 <div align="center">
 
 <p align="center">
-    Create custom folder icons for macOS.
+    Create custom folder icons for Windows.
     <br />
-    <a href="https://folderart.christianvm.dev"><strong>Live Demo »</strong></a>
+    <a href="https://folder-studio.netlify.app"><strong>Live Demo »</strong></a>
     <br />
     <br />
 </p>
@@ -23,7 +21,7 @@
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/christianvmm/folderart.git
+   git clone https://github.com/sameerasw/folderart.git
    ```
 
 2. Install NPM packages
