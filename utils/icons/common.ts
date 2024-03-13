@@ -1,5 +1,5 @@
 import { base } from '@/consts'
-import { Canvas, Config, Context, Color } from './types'
+import { Canvas, Config, Context} from './types'
 import {
    ICON_SHADOW_COLOR,
    ICON_SHADOW_SIZE,
