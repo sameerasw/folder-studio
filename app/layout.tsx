@@ -5,9 +5,9 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-   title: 'Folder Icon Maker - FolderArt by christianvm',
-   description: 'Create custom icons for files or folders for macOS',
-   metadataBase: new URL('https://folderart.christianvm.dev'),
+   title: 'Folder Icon Maker - Folder Studio by @sameerasw',
+   description: 'Create custom icons for files or folders for Windows',
+   metadataBase: new URL('https://folder-studio.netlify.app'),
 }
 
 export default function RootLayout({

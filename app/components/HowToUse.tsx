@@ -1,9 +1,6 @@
 'use client'
 import { QuestionMarkIcon } from '@/icons'
 import { useState } from 'react'
-import SetIconGif from '../../public/set-icon.gif'
-
-import Image from 'next/image'
 
 export function HowToUse() {
    const [open, setOpen] = useState(false)
@@ -38,32 +35,12 @@ export function HowToUse() {
                   (open ? 'scale-100' : 'scale-50')
                }
             >
-               <div className='w-full h-full'>
-                  <h1 className='text-lg font-semibold mb-4'>How to use</h1>
-
+               <div className='w-full h-full p-4'>
                   <ol className='text-zinc-600 space-y-4'>
                      <li>
-                        1. <span className='font-medium'>Select</span> an icon or{' '}
-                        <span className='font-medium'>upload</span> a custom one.
+                        <span className='font-medium'>Built by</span> <a href="https://github.com/sameerasw">@sameerasw</a> forking from <a href="https://github.com/christianvm">@christianvm.</a>
                      </li>
-                     <li>
-                        2. <span className='font-medium'>Download</span> the icon.
-                     </li>
-
-                     <li>
-                        3. <span className='font-medium'>Choose File &gt; Get Info</span> in the
-                        menu bar.
-                     </li>
-
-                     <li>
-                        4. <span className='font-medium'>Drag and Drop</span> the custom icon into
-                        the folder.
-                     </li>
-
-                     <Image
-                        src={SetIconGif}
-                        alt='Video of how to set a custom folder icon in macOS'
-                     />
+                     <img src="https://avatars.githubusercontent.com/u/68902530?v=4&size=500" alt="" style={{borderRadius: '10px'}}/>
                   </ol>
                </div>
             </div>

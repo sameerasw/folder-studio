@@ -89,6 +89,7 @@ export function Configuration({
             type='color'
             className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
             value={configuration.color}
+            title='Pick a color'
             onChange={(e) => {
                colorChange(e)
             }}
@@ -130,7 +131,13 @@ export function Configuration({
             })}
          </ul>
 
-         <Button variant='outlined' className='w-full mt-auto' onClick={() => openFileExporer()}>
+         <Button variant='outlined' className='w-full mt-auto' onClick={() => changePageTheme()}>
+
+            <span>Change Theme</span>
+
+         </Button>
+
+         <Button variant='outlined' className='w-full' onClick={() => openFileExporer()}>
             <FolderIcon className='h-5 w-5 stroke-2' />
             <span>Custom Icon</span>
          </Button>
@@ -139,12 +146,6 @@ export function Configuration({
             <DownloadIcon className='h-5 w-5 stroke-2' />
 
             <span>Download</span>
-         </Button>
-
-         <Button variant='outlined' className='w-full' onClick={() => changePageTheme()}>
-
-            <span>Change Theme</span>
-
          </Button>
       </aside>
    )

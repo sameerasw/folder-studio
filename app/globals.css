@@ -74,3 +74,8 @@ select{
 Image{
    transition: all 1s ease-in-out;
 }
+
+ol a{
+   color: #099;
+   text-decoration: underline;
+}
