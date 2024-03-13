@@ -6,6 +6,8 @@ import { Config } from '@/utils/icons'
 import { useRef } from 'react'
 import { devIcons } from './defaultIcons'
 
+let pageTheme = 'dark'
+
 export function Configuration({
    configuration,
    onChangeConfig,
@@ -24,14 +26,13 @@ export function Configuration({
    }
 
    function changePageTheme() {
-      if (configuration.theme !== 'dark') {
-         document.documentElement.classList.add('dark')
-         configuration.theme = 'dark'
-         localStorage.setItem('theme', 'dark')
+      if (pageTheme !== 'dark') {
+         // select body and change the theme
+         document.querySelector('main')!.classList.add('dark')
+         pageTheme = 'dark'
       } else {
-         document.documentElement.classList.remove('dark')
-         configuration.theme = 'light'
-         localStorage.setItem('theme', 'light')
+         document.querySelector('main')!.classList.remove('dark')
+         pageTheme = 'light'
       }
    }
 
@@ -61,7 +62,7 @@ export function Configuration({
             }}
          />
 
-         <select
+         {/* <select
             className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
             value={configuration.theme}
             onChange={(e) => {
@@ -70,17 +71,18 @@ export function Configuration({
          >
             <option value='dark' style={{color:'#bbbb00'}} >Yellow</option>
             <option value='light' style={{color:'#3388ff'}} >Blue</option>
-         </select>
+         </select> */}
 
          {/* add a color picker with a color wheel*/}
-         {/* <input
+         <input
             type='color'
             className='h-10 border border-zinc-200 rounded-md px-3 py-2 w-full appearance-none cursor-pointer'
             value={configuration.color}
             onChange={(e) => {
-               onChangeConfig('color', e.target.value)
+               // modify the color picker to a color to a number
+               onChangeConfig('color', parseInt(e.target.value.slice(1), 16))
             }}
-         /> */}
+         />
          
 
          <select

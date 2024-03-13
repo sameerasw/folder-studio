@@ -1,4 +1,4 @@
-export type Theme = 'dark' | 'light'
+export type Theme = 'dark'
 
 export type IconConstraints = {
    maxWidth: number
@@ -9,6 +9,7 @@ export type IconConstraints = {
 }
 
 export type Config = {
+   color: number
    theme: Theme
    adjustColor: number
    icon?: File | string
@@ -34,4 +35,10 @@ export type Context = {
       settings?: ImageDataSettings | undefined
    ) => ImageData
    putImageData: (imagedata: ImageData, dx: number, dy: number) => void
+}
+
+export type Color = {
+   red: number
+   green: number
+   blue: number
 }

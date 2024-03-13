@@ -11,6 +11,7 @@ export type OnChangeConfig = <T extends keyof Config>(key: T, value: Config[T]) 
 export function FolderEditor() {
    const [filename] = useState('icon')
    const [configuration, setConfiguration] = useState<Config>({
+      color: 111111,
       theme: 'dark',
       adjustColor: 1,
       icon: 'github',

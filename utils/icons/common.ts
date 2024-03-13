@@ -1,5 +1,5 @@
 import { base } from '@/consts'
-import { Canvas, Config, Context, Theme } from './types'
+import { Canvas, Config, Context, Theme, Color } from './types'
 import {
    ICON_SHADOW_COLOR,
    ICON_SHADOW_SIZE,
@@ -20,8 +20,13 @@ export function getIconPath(icon: string) {
    }
 }
 
-export function getFolderPath(resolution: Resolution, theme: Theme) {
-   const publicPath = `resources/folders/${theme}/${FolderImage[resolution]}.png`
+export function getFolderPath(resolution: Resolution, overlay: boolean) {
+   let publicPath: string;
+   if (overlay) {
+      publicPath = `resources/folders/light/${FolderImage[resolution]}.png`
+   } else {
+      publicPath = `resources/folders/dark/${FolderImage[resolution]}.png`
+   }
    const serverSide = typeof window === 'undefined'
 
    if (serverSide) {

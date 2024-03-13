@@ -68,12 +68,7 @@ export const IconColor: Record<
       red: 240,
       green: 175,
       blue: 25,
-   },
-   light: {
-      red: 55,
-      green: 145,
-      blue: 220,
-   },
+   }
 }
 
 export const ICON_SHADOW_SIZE = 6

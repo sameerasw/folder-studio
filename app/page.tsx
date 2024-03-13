@@ -3,7 +3,7 @@ import { MobileUnderConstruction } from '@/app/components/MobileUnderConstructio
 
 export default function Home() {
    return (
-      <main className='p-1 md:p-5'>
+      <main className='p-1 md:p-5 dark'>
          <FolderEditor />
          <MobileUnderConstruction />
       </main>

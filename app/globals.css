@@ -16,8 +16,8 @@
    }
 }
 
-html{
-   transition: background-color 0.5s, color 0.5s;
+main{
+   transition: background-color 1s, color 1s;
 }
 
 .dark{
