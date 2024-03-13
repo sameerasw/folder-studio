@@ -1,5 +1,8 @@
 <h1 align="center">Folder Studio</h1>
 
+![CleanShot 2024-03-14 at 1  59 56](https://github.com/sameerasw/folderart/assets/68902530/c8cda18c-866e-492e-986c-3a71623aef1b)
+
+
 <div align="center">
 
 <p align="center">
