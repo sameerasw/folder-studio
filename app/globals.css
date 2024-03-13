@@ -37,10 +37,40 @@ select{
 
 .editor{
    box-shadow: 0 0 20px 0 #00000066;
+   left: 0;
+   animation: slideInFromLeft 1s cubic-bezier(0.175, 0.485, 0.32, 1.275)
+}
+
+/* create custom animation to make the .editor slide in from left side */
+@keyframes slideInFromLeft {
+   0% {
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes scaleIn {
+   0% {
+      scale: 0;
+      opacity: 0;
+   }
+   100% {
+      scale: 1;
+      opacity: 1;
+   }
 }
 
 .icon-preview{
    /* shadow of the png */
    filter: drop-shadow(0 0 20px #00000033);
-   
+   animation: scaleIn 1s cubic-bezier(0.175, 0.485, 0.32, 1.275);
+   transition: color 1s;
+}
+
+Image{
+   transition: all 1s ease-in-out;
 }
